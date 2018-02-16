@@ -68,7 +68,7 @@ export default class Countdown extends Component {
     let { remainingTime } = this.state
 
     if (format.day) {
-      let days = moment.duration(remainingTime).get('days')
+      let days = moment.duration(remainingTime).days()
       if (leadingZero) {
         days = this.addLeadingZero(days)
       }
@@ -92,7 +92,7 @@ export default class Countdown extends Component {
     }
 
     if (format.minute) {
-      let minutes = moment.duration(remainingTime).get('minutes')
+      let minutes = moment.duration(remainingTime).minutes()
       if (leadingZero) {
         minutes = this.addLeadingZero(minutes)
       }
